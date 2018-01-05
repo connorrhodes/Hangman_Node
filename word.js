@@ -18,7 +18,7 @@ function Word(wrd){
         }
     };
 
-    this.iMightveFoundTheWord = function() {
+    this.didWeFindTheWord = function() {
         if(this.letters.every(function(lttr){
             return lttr.appear === true;
         })){

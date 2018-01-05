@@ -1,7 +1,5 @@
-//list of words to guess
-//The hangman property was just copied from the internet to imitate a hangman 
-
+//list of words to guess.
 exports.newWord = {
-    wordList:['test','not a test','could be a test','you will not guess it'],
+    wordList:['TEST','NOT A TEST','COULD BE A TEST','INCEPTION','THE MATRIX','I ROBOT','THE TERMINATOR','ALIEN','THE DEPARTED','BLADE RUNNER','SPIDER MAN','THE AVENGERS','IRONMAN'],
     hangman: ["\n\n\n\n\n\n\n-------------", "\n |\n |\n |\n |\n |\n |\n |\n-------------", "____________\n |         |\n |\n |\n |\n |\n |\n-------------","____________\n |         |\n |         O\n |\n |\n |\n |\n |\n-------------","____________\n |         |\n |         O\n |         |\n |         |\n |\n |\n |\n-------------","____________\n |         |\n |         O\n |         |\n |         |\n |        ---\n |\n |\n-------------", "____________\n |         |\n |         O\n |       __|\n |         |\n |        ---\n |\n |\n-------------", "____________\n |         |\n |         O\n |       __|__\n |         |\n |        ---\n |\n |\n-------------", "____________\n |         |\n |         O\n |       __|__\n |         |\n |        ---\n |        |\n |\n-------------","____________\n |         |\n |         O\n |       __|__\n |         |\n |        ---\n |        | |\n |\n-------------"]
-};
+  };
