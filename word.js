@@ -9,7 +9,10 @@ function Word(wrd){
     this.letters = [];
     this.wordFound = false;
 
-    this.getDemLets = function() {
+    this.getDemLets = function(err) {
+        if(err){
+            console.log(err);
+        }
 
         for(var i = 0; i < itMightBeThat.word.length; i++){
             var newLetter = new Letter(itMightBeThat.word[i]);
@@ -35,7 +38,7 @@ function Word(wrd){
                 lttr.appear = true;
                 whatToReturn++;
             }
-        })
+        });
 
         return whatToReturn;
     };

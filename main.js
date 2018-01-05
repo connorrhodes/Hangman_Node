@@ -1,5 +1,5 @@
-var inquirer = require("inquirer");
-var isLetter = ("is-letter");
+var inquirer = require('inquirer');
+var isLetter = ('is-letter');
 
 var Word = require('./word.js');
 var Game = require('./game.js');
