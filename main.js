@@ -3,7 +3,7 @@ var isLetter = require('is-letter');
 
 var Word = require('./word.js');
 var Game = require('./game.js');
-
+//the price of failure
 var displayTheHangingMan = Game.newWord.hangman;
 
 require('events').EventEmitter.prototype._maxListeners = 100;
@@ -59,7 +59,7 @@ var hangman = {
     },
     keepPokingTheUser: function () {
         var that = this;
-
+        //prompts user for a letter
         inquirer.prompt([{
             name: "theChosenYuan",
             type: "input",
