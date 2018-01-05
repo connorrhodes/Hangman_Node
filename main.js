@@ -129,3 +129,5 @@ var hangman = {
     }
 }
 hangman.startGame();
+//initially, i started out using long silly names for most of the variables--but when the program wasn't working
+// re writing alot of long silly words got tedious so i changed most of them to smaller "normal" names.
