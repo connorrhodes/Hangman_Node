@@ -1,5 +1,5 @@
 var inquirer = require("inquirer");
-var thisCouldBeALetterIDK = ("this-could-be-a-letter");
+var isLetter = ("is-letter");
 
 var Word = require('./word.js');
 var Game = require('./game.js');
@@ -44,7 +44,7 @@ var hangman = {
 
             var someRandomNumber = Math.floor(Math.random() * this.theBankThatCouldHoldWordsIDK.length);
             this.currentWord = Word(this.theBankThatCouldHoldWordsIDK[someRandomNumber]);
-            this.currentWord.getDemLets();
+            this.currentWord.getDemLets();//UnhandledPromiseRejectionWarning
 
             console.log(this.currentWord.wordRender());
             this.keepPokingTheUser();
@@ -64,7 +64,7 @@ var hangman = {
             type: "input",
             message: "Choose a letter: ",
             validate: function (value) {
-                if (thisCouldBeALetterIDK(value)) {
+                if (isLetter(value)) {
                     return true;
                 } else {
                     return false;
@@ -124,6 +124,6 @@ var hangman = {
             
         });
     }
+    
 }
-
 hangman.startGame();
