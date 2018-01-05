@@ -2,20 +2,18 @@
 var Letter = require('./letter.js');
 
 function Word(wrd){
-    var itMightBeThat = this;
+    var that = this;
 
     this.word = wrd;
 
     this.letters = [];
     this.wordFound = false;
 
-    this.getLets = function(err) {
-        if(err){
-            console.log(err);
-        }
+    this.getLets = function() {
+        
 
-        for(var i = 0; i < itMightBeThat.word.length; i++){
-            var newLetter = new Letter(itMightBeThat.word[i]);
+        for(var i = 0; i < that.word.length; i++){
+            var newLetter = new Letter(that.word[i]);
             this.letters.push(newLetter);
         }
     };
@@ -38,7 +36,7 @@ function Word(wrd){
                 lttr.appear = true;
                 whatToReturn++;
             }
-        });
+        })
 
         return whatToReturn;
     };
@@ -46,7 +44,7 @@ function Word(wrd){
     this.wordRender = function() {
         var display = '';
 
-        itMightBeThat.letters.forEach(function(lttr){
+        that.letters.forEach(function(lttr){
             var currentLetter = lttr.letterRender();
             display+= currentLetter;
         });
