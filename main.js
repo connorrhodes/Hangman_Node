@@ -9,7 +9,7 @@ var displayTheHangingMan = Game.newWord.hangman;
 require('events').EventEmitter.prototype._maxListeners = 100;
 
 var hangman = {
-    theBankThatCouldHoldWordsIDK: Game.newWord.wordList,
+    wordBank: Game.newWord.wordList,
     guessesRemaining: 10,
 
     guessedLetters: [],
@@ -34,17 +34,16 @@ var hangman = {
             } else {
                 console.log("Don't leave me");
             }
-        })
-    },
+        })},
     newGame: function () {
         if (this.guessesRemaining === 10) {
             console.log("------------------------------");
             console.log("Here we go again...");
             console.log("------------------------------");
 
-            var someRandomNumber = Math.floor(Math.random() * this.theBankThatCouldHoldWordsIDK.length);
-            this.currentWord = Word(this.theBankThatCouldHoldWordsIDK[someRandomNumber]);
-            this.currentWord.getDemLets();//UnhandledPromiseRejectionWarning
+            var randNum = Math.floor(Math.random() * this.wordBank.length);
+            this.currentWord = Word(this.wordBank[randNum]);
+            this.currentWord.getLets();//UnhandledPromiseRejectionWarning
 
             console.log(this.currentWord.wordRender());
             this.keepPokingTheUser();
@@ -70,7 +69,7 @@ var hangman = {
                     return false;
                 }
             }
-        }]).then(function (ltr) {
+        }]).then(function(ltr) {
             var letterReturned = (ltr.theChosenYuan).toUpperCase();
 
             var guessedAlready = false;
@@ -123,7 +122,6 @@ var hangman = {
             }
             
         });
-    }
-    
+    }  
 }
 hangman.startGame();

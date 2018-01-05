@@ -9,7 +9,7 @@ function Word(wrd){
     this.letters = [];
     this.wordFound = false;
 
-    this.getDemLets = function(err) {
+    this.getLets = function(err) {
         if(err){
             console.log(err);
         }
